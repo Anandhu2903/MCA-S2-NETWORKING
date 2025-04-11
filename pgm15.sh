@@ -1,0 +1,16 @@
+echo "Enter a number:"
+read number
+smallest=${number:0:1}
+for (( i=1; i<${#number}; i++ )); do
+digit=${number:i:1}
+if (( digit < smallest )); then
+smallest=$digit
+fi
+done
+echo "Smallest digit: $smallest"
+//
+mlm@sst-s-w-developing-company:~/Desktop/Anandhu$ bash pgm15.sh
+Enter a number:
+123
+Smallest digit: 1
+
